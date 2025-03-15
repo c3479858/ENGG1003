@@ -5,4 +5,3 @@ x = 4
 
 y = a*x**2 + b*x + c            #Formula
 print(y)                        #Displaying the Answer
-#TEST TO SEE IF GIT WORKS
