@@ -1,18 +1,38 @@
-#Part A
 import numpy as np
+#ASK ABOUT THESE ANSWERS BEFORE SUBMITTING
+
+#Part A
 np.random.seed(1)
-x = np.random.randint(0, 101, size=35)
+markAmount = 35
+mark = np.random.randint(0, 101, size=markAmount)
+
 #Part B
-markAvg = np.mean(x)                                            #Could be wrong, come back to this!!!
+markSum = 0
+for i in mark:
+    markSum += i
+markAvg = markSum/markAmount
+
 #Part C
-markMax = "placeholder"
+markMax = 0
+for i in mark:
+    if i > markMax:
+        markMax = i
+
 #Part D
-markFail = "placeholder"
+markFail = 0
+for i in mark:
+    if i > 50:
+        markFail += 1
+
 #Part E
-markAdj = "placeholder"
+markAdj = np.copy(mark)
+for i in range(0, markAmount, 1):
+    if markAdj[i] < 25:
+        markAdj[i] = 2*markAdj[i]
+
 #Part F
-print("Students have the following marks:",x)
-print("The average of marks is:{:.2f}".format(markAvg))
-print("The max mark is:{}".format(markMax))
-print("The number of elements less than 50 is:{}".format(markFail))
-print("Here is the array after elements less than 25 being doubled:{}".format(markAdj))
+print("Students have the following marks:",mark)                                                #Part A
+print("The average of marks is: {:.2f}".format(markAvg))                                        #Part B
+print("The max mark is: {}".format(markMax))                                                    #Part C
+print("The number of elements less than 50 is: {}".format(markFail))                            #Part D
+print("Here is the array after elements less than 25 being doubled: {}".format(markAdj))        #Part E
