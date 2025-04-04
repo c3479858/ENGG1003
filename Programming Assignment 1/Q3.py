@@ -32,7 +32,7 @@ for i in range(0, markAmount, 1):
 
 #Part F
 print("Students have the following marks:",mark)                                                #Part A
-print("The average of marks is: {:.2f}".format(markAvg))                                        #Part B
+print("The average of marks is: {:.3f}".format(markAvg))                                        #Part B
 print("The max mark is: {}".format(markMax))                                                    #Part C
 print("The number of elements less than 50 is: {}".format(markFail))                            #Part D
 print("Here is the array after elements less than 25 being doubled: {}".format(markAdj))        #Part E
