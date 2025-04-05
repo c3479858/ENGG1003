@@ -1,5 +1,4 @@
 import numpy as np
-#ASK ABOUT THESE ANSWERS BEFORE SUBMITTING
 
 #Part A
 np.random.seed(1)
