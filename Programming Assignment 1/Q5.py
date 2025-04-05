@@ -1,15 +1,17 @@
-#def arctan(x):
-#    for i in range(1, 23, 4):
-#        x += (1/(i*x**i)) - (1/((3*i)*x**(3*i)))            #NEEDS DEBUGGING
-#print(x)
-#    return x
-
 import numpy as np
 
+#ARCTAN FUNCTION
 def arctan(x):
+    terms = 11
+    output = 0
+    for i in range(1, 2 * terms, 4):            #takes the numbers [1, 5, 9, 13, 17, 21]
+        output += (1 / (i * x**i))              #adds 1/i*i^2 to the output
+    for i in range(3, 2 * terms, 4):            #takes the numbers [3, 7, 11, 15, 19]
+        output -= (1 / (i * x**i))              #subtracts 1/i*i^2 from the output
+    return output
 
-    for i in range(1, 23, 4):
-        x += 1/(i*(x**i))
-    for i in range(3, 23, 4):
-        x -= 1/(i*(x**i))
-    return x
+#TESTING CODE
+pi = np.pi
+piArc = 4 * (4 * arctan(5) - arctan(239))
+if piArc - pi < 10**(-15):
+    print("True")
