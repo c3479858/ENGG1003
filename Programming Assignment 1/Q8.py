@@ -1,6 +1,6 @@
 from math import factorial
 
-length = 3                                                                      #amount of rows wanted
+length = 8                                                                      #amount of rows wanted
 
 for n in range(length):                                                         #splitting length into individual rows
     for i in range(length-n+1):                                                 #left side spacing
