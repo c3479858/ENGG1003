@@ -20,7 +20,7 @@ for i in mark:
 #Part D
 markFail = 0
 for i in mark:
-    if i > 50:
+    if i < 50:
         markFail += 1
 
 #Part E

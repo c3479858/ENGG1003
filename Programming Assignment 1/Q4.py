@@ -7,6 +7,7 @@ def numDigits(num):
         num //= 10
         N += 1
     return N
+#print(numDigits(1234))                         #testing
 
 #Part B
 def coPrime(n, m):
