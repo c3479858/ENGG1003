@@ -4,8 +4,8 @@ def f(x):
     return np.exp(x) - 3*x
 
 eps = 1e-6
-xLO = 1
-xHI = 2
+xLO = 0
+xHI = 1
 
 xMID = (xLO + xHI) / 2
 iters = 0

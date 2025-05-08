@@ -3,7 +3,7 @@ import numpy as np
 def f(x):
     return np.exp(x) - 3*x
 
-eps = 1e-6
+eps = 1e-10
 x0 = 0
 x1 = 1
 iters = 0
